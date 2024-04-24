@@ -12,10 +12,13 @@ app.use(cors());
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb://127.0.0.1:27017/notes", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://mohit4pc:mohit123@cluster0.t5cfznw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
